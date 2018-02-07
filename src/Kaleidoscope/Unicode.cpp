@@ -25,10 +25,12 @@ void Unicode::start(void) {
   case hostos::LINUX:
     hid::pressRawKey(Key_LeftControl);
     hid::pressRawKey(Key_LeftShift);
+    hid::pressRawKey(Key_LeftAlt);
     hid::pressRawKey(Key_U);
     hid::sendKeyboardReport();
     hid::releaseRawKey(Key_LeftControl);
     hid::releaseRawKey(Key_LeftShift);
+    hid::releaseRawKey(Key_LeftAlt);
     hid::releaseRawKey(Key_U);
     hid::sendKeyboardReport();
     break;
